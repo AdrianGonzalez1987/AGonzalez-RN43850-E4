@@ -61,6 +61,7 @@ export default ItemListCategory
 
 const styles = StyleSheet.create({
     container: {
+        padding:10,
         height: '90%',
         backgroundColor: colors.beige,
         alignItems: 'center'

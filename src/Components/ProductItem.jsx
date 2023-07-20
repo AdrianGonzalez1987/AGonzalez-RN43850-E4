@@ -37,9 +37,9 @@ export default ProductItem;
 
 const styles = StyleSheet.create({
     image: {
-        height: 120,
-        width: "40%",
-        minWidth: 150,
+        height: 80,
+        width: 80,
+        minWidth: 80,
         maxWidth: 250,
         borderRadius: 8,
     },
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         height: 120,
         justifyContent: "space-between",
+        padding:8,
     },
     textCategory: {
         width: "50%",
