@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: '10%',
-        padding:6,
+        padding:2,
         gap: 18,
     },
     containerSm: {
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     input: {
         width: 250,
-        padding: 8,
+        padding: 2,
         fontSize: 18,
         backgroundColor: colors.cream,
         borderRadius: 10,

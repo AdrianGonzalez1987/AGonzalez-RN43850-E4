@@ -27,7 +27,7 @@ export default Header;
 
 const styles = StyleSheet.create({
     containerHeader: {
-        backgroundColor: colors.peach,
+        backgroundColor: colors.orange,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -42,5 +42,8 @@ const styles = StyleSheet.create({
         position: "absolute",
         right: 30,
         top: "50%",
+        backgroundColor: colors.beige,
+        borderRadius:15,
+       
     },
 });

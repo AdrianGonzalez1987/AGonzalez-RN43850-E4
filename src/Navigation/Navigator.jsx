@@ -7,14 +7,16 @@ import Home from '../Screens/Home'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { StatusBar } from 'react-native'
+import { colors } from '../Global/Colors'
 
 const Stack = createNativeStackNavigator()
 
 const Navigator = () => {
   return (
     <SafeAreaView style = {styles.container}>
-        <NavigationContainer>
+        <NavigationContainer >
             <Stack.Navigator
+            style = {styles.contNAvi}
                 initialRouteName='Home'
                 screenOptions={
                     ({route, navigation}) => (
@@ -31,6 +33,7 @@ const Navigator = () => {
                 }            
             >
                 <Stack.Screen 
+                    
                     name='Home'
                     component={Home}
                 />
@@ -54,5 +57,8 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+    },
+    contNAvi: {
+        backgroundColor: colors.beige
     }
   })
