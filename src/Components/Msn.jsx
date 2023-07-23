@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Modal, Button, Pressable } from 'react-native'
 import * as React from 'react'
 import Search from './Search'
+import ItemListCategory from '../Screens/ItemListCategory'
 
 export default function Msn({
     isModalOpen,
@@ -44,13 +45,13 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         shadowColor: '#000',
         shadowOffset: {
-            width: 0,
+            width: 2,
             height: 2
         },
-        shadowOpacity:0.25,
+        shadowOpacity:0.30,
         borderRadius : 8,
         shadowRadius: 8,
-        elevation: 5,
+        elevation: 10,
     }
 })
 

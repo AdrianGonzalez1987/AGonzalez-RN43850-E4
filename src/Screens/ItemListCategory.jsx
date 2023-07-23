@@ -18,6 +18,8 @@ const ItemListCategory = ({
   const [keyword, setKeyword] = useState("")
   const [keywordError, setKeywordError] = useState(" ")
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+
   useEffect(()=> {
     //Lógica de manejo de category
     const productsFiltered = productsRaw.filter(product => product.category === category && product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
@@ -49,7 +51,7 @@ const ItemListCategory = ({
     <View style={styles.container}>
         <Search
           onSearch={onSearch}
-          error={keywordError}
+          
           goBack={()=> navigation.goBack()}
         />
         <FlatList
@@ -61,13 +63,15 @@ const ItemListCategory = ({
             />}
             showsVerticalScrollIndicator={false}
         />
-        <SafeAreaView style={styles.modalMsbPri}  >
-          <Button title='ok' onPress={() => setIsModalOpen(!isModalOpen)}/>
+        
+          
           <Msn  
+              error={keywordError}
+              style={styles.modalMsbPri}
               setIsModalOpen={setIsModalOpen}
               isModalOpen = {isModalOpen} 
           />
-        </SafeAreaView>
+        
        
     </View>
   )
@@ -85,8 +89,10 @@ const styles = StyleSheet.create({
     modalMsbPri: {
       flex: 1,
       alignContent: 'center',
-      backgroundColor: 'white',
+      backgroundColor: '#000',
       justifyContent: 'center'
     }
 })
+
+const onClear = () => { setKeywordError( " ")}
 
