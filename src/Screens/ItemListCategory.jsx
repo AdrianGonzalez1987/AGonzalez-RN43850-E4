@@ -1,10 +1,11 @@
-import { FlatList, StyleSheet, View, SafeAreaView, Button } from 'react-native'
+import { FlatList, StyleSheet, View} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import productsRaw from '../Data/products.json'
 import ProductItem from '../Components/ProductItem'
 import { colors } from '../Global/Colors'
 import Search from '../Components/Search'
 import Msn from '../Components/Msn'
+
 
 const ItemListCategory = ({
   navigation,
@@ -64,13 +65,17 @@ const ItemListCategory = ({
             showsVerticalScrollIndicator={false}
         />
         
-          
-          <Msn  
+         
+
+             <Msn  
+              
               error={keywordError}
-              style={styles.modalMsbPri}
               setIsModalOpen={setIsModalOpen}
               isModalOpen = {isModalOpen} 
           />
+
+        
+         
         
        
     </View>
@@ -89,7 +94,7 @@ const styles = StyleSheet.create({
     modalMsbPri: {
       flex: 1,
       alignContent: 'center',
-      backgroundColor: '#000',
+      backgroundColor: '#fff',
       justifyContent: 'center'
     }
 })

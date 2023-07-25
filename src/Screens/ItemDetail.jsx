@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import allProducts from "../Data/products.json";
+import { colors } from "../Global/Colors";
 
 const ItemDetail = ({ 
   navigation,
@@ -35,7 +36,7 @@ const ItemDetail = ({
   }, [idSelected]);
 
   return (
-      <View>
+      <View style={styles.fondito}>
           {product ? (
               <View
                   style={
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       alignItems: "center",
       padding: 10,
+      
   },
   mainContainerLandscape: {
       flexDirection: "row",
@@ -86,5 +88,10 @@ const styles = StyleSheet.create({
   },
   text: {
       fontSize: 20,
+  },
+  fondito:{
+    flex:1,
+    justifyContent: "center",
+    backgroundColor:colors.cream
   }
 });
